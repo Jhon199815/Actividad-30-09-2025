@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ejercicios: RegEx · Fechas · Kanban</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="wrap">
+    <h1>Ejercicios: RegEx · Fechas · Kanban</h1>
+
+    <section class="card">
+      <h2>Validadores (RegEx)</h2>
+      <div class="grid">
+        <div>
+          <label>Email</label>
+          <input id="email" type="text" placeholder="usuario@ejemplo.com" />
+          <button id="checkEmail">Validar</button>
+          <div id="rEmail" class="result"></div>
+        </div>
+        <div>
+          <label>Teléfono</label>
+          <input id="phone" type="text" placeholder="+573001234567" />
+          <button id="checkPhone">Validar</button>
+          <div id="rPhone" class="result"></div>
+        </div>
+        <div>
+          <label>Contraseña</label>
+          <input id="pass" type="password" placeholder="Mín 8 car, 1 may, 1 dígito" />
+          <button id="checkPass">Validar</button>
+          <div id="rPass" class="result"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Contador de días</h2>
+      <div class="row">
+        <label>Fecha destino</label>
+        <input id="targetDate" type="date" />
+        <div id="daysLeft" class="result"></div>
+        <button id="setToday">Usar hoy + 7 días (ej.)</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Tablero Kanban</h2>
+      <div class="board" id="board">
+        <div class="column" data-name="por-hacer">
+          <h3>Por hacer</h3>
+          <div class="tasks" id="col-1">
+            <div class="task" id="t1" draggable="true">Tarea A</div>
+            <div class="task" id="t2" draggable="true">Tarea B</div>
+          </div>
+        </div>
+        <div class="column" data-name="en-progreso">
+          <h3>En progreso</h3>
+          <div class="tasks" id="col-2">
+            <div class="task" id="t3" draggable="true">Tarea C</div>
+          </div>
+        </div>
+        <div class="column" data-name="hecho">
+          <h3>Hecho</h3>
+          <div class="tasks" id="col-3"></div>
+        </div>
+      </div>
+      <div class="controls">
+        <input id="newTaskText" placeholder="Nueva tarea" />
+        <button id="addTask">Agregar</button>
+        <button id="clearBoard">Limpiar tablero</button>
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
